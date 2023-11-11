@@ -1,6 +1,7 @@
+# Adapt the following tutorials to use Vertex AI embeddings
 # from https://python.langchain.com/docs/integrations/vectorstores/pinecone
 # and https://python.langchain.com/docs/use_cases/question_answering/
-# adapted to use Vertex AI embeddings
+
 
 import os
 import getpass
