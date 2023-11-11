@@ -35,7 +35,7 @@ pinecone.init(
     environment=os.getenv("PINECONE_ENV"),  # next to api key in console
 )
 
-index_name = "rag-demo"
+index_name = "langchain-demo"
 
 # First, check if our index already exists. If it doesn't, we create it
 if index_name not in pinecone.list_indexes():
