@@ -31,6 +31,7 @@ pinecone.init(
 index_name = "langchain-demo"
 
 # First, check if our index already exists. If it doesn't, we create it
+# Vertex AI embedding model  uses a dimension of 768
 if index_name not in pinecone.list_indexes():
     # we create a new index
     pinecone.create_index(
@@ -39,7 +40,7 @@ if index_name not in pinecone.list_indexes():
       dimension=768  
 )
 print("past index creation for index ", index_name)
-# Vertex AI embedding model  uses 768 dimensions`
+
 docsearch = Pinecone.from_documents(docs, embeddings, index_name=index_name)
 
 # if you already have an index, you can load it like this

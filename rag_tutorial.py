@@ -13,12 +13,7 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import Pinecone
 from langchain.document_loaders import TextLoader
 
-'''
-loader = TextLoader("../data/state_of_the_union.txt")
-documents = loader.load()
-text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-docs = text_splitter.split_documents(documents)
-'''
+
 # Load documents
 
 from langchain.document_loaders import WebBaseLoader
@@ -64,9 +59,7 @@ from langchain import hub
 rag_prompt = hub.pull("rlm/rag-prompt")
 
 print("past index rag_prompt creation ")
-#from langchain.chat_models import ChatVertexAI
 from langchain.prompts import ChatPromptTemplate
-#llm = ChatVertexAI()
 from langchain.llms import VertexAI
 llm = VertexAI()
  
